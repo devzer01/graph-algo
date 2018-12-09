@@ -87,6 +87,10 @@ public class Path {
 
     }
 
+    public static void clearPaths() {
+        pathList.clear();
+    }
+
     // Prints all paths from
     // 's' to 'd'
     void printAllPaths(String s, String d)
