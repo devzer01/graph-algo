@@ -75,7 +75,7 @@ public class GraphFunctionalTests {
         Graph.getNode("B").addDestination(Graph.getNode("B"),0);
         Node nodeA = Graph.getNode("B");
         Node nodeC = Graph.getNode("B");
-        Graph.calculateDistanceFromSource(nodeA);
+        Graph.calculateDistance(nodeA);
         System.out.print("The length of the shortest route (in terms of distance to travel) from B to B is ");
         System.out.println(nodeC.getDistance());
         assertTrue(nodeC.getDistance() == 0);

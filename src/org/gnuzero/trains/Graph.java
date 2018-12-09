@@ -1,8 +1,6 @@
 package org.gnuzero.trains;
 
 import java.util.*;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class Graph
 {
@@ -92,8 +90,13 @@ public class Graph
     }
 
 
-
-    public static void calculateDistanceFromSource(Node source) {
+    /**
+     * this is disjakra implementation used only in one case
+     * to return 0 in the same B to B
+     *
+     * @param source
+     */
+    public static void calculateDistance(Node source) {
 
         source.setDistance(0);
 
@@ -102,14 +105,14 @@ public class Graph
         unsettledNodes.add(source);
 
         while (unsettledNodes.size() != 0) {
-            Node currentNode = getLowestDistanceNode(unsettledNodes);
+            Node currentNode = getLowestNode(unsettledNodes);
             unsettledNodes.remove(currentNode);
             for (Map.Entry<Node, Integer> adjacencyPair : currentNode.getAdjacentNodes().entrySet()) {
                 Node adjacentNode = adjacencyPair.getKey();
                 Integer edgeWeigh = adjacencyPair.getValue();
 
                 if (!settledNodes.contains(adjacentNode)) {
-                    getMinimumDistance(adjacentNode, edgeWeigh, currentNode);
+                    getDistance(adjacentNode, edgeWeigh, currentNode);
                     unsettledNodes.add(adjacentNode);
                 }
             }
@@ -117,7 +120,13 @@ public class Graph
         }
     }
 
-    private static void getMinimumDistance(Node evaluationNode, Integer edgeWeigh, Node sourceNode) {
+    /**
+     *
+     * @param evaluationNode
+     * @param edgeWeigh
+     * @param sourceNode
+     */
+    private static void getDistance(Node evaluationNode, Integer edgeWeigh, Node sourceNode) {
         Integer sourceDistance = sourceNode.getDistance();
         if (sourceDistance + edgeWeigh < evaluationNode.getDistance()) {
             evaluationNode.setDistance(sourceDistance + edgeWeigh);
@@ -127,7 +136,12 @@ public class Graph
         }
     }
 
-    private static Node getLowestDistanceNode(Set<Node> nodeSet) {
+    /**
+     *
+     * @param nodeSet
+     * @return
+     */
+    private static Node getLowestNode(Set<Node> nodeSet) {
         Node lowestNode = null;
         int lowestDistance = Integer.MAX_VALUE;
         for (Node node : nodeSet) {

@@ -12,6 +12,9 @@ public class NodeBuilder
     {
         for (int i = 0; i < list.length; i++) {
             String element = list[i].replace(" ", "");
+            if (element.length() > 4) {
+                throw new RuntimeException("element not handled");
+            }
             Graph.getNode(element.substring(0, 1)).addDestination(
                     Graph.getNode(element.substring(1,2)),
                     Integer.parseInt(element.substring(2))

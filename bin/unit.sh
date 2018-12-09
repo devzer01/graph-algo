@@ -12,3 +12,4 @@ java -cp ./src/:./tests/:./lib/junit-4.12.jar:./lib/hamcrest-core-1.3.jar org.ju
 java -cp ./src/:./tests/:./lib/junit-4.12.jar:./lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore org.gnuzero.trains.MapFileReaderTest
 java -cp ./src/:./tests/:./lib/junit-4.12.jar:./lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore org.gnuzero.trains.GraphTest
 java -cp ./src/:./tests/:./lib/junit-4.12.jar:./lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore org.gnuzero.trains.PathTests
+java -cp ./src/:./tests/:./lib/junit-4.12.jar:./lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore org.gnuzero.trains.NodeBuilderTests
