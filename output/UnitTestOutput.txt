@@ -1,0 +1,46 @@
+mainstation:TrainsJava nayana$ ./unit.sh 
+Cleaning
+Compiling classes
+Note: tests/org/gnuzero/trains/NodeTests.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: src/org/gnuzero/trains/Path.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+JUnit version 4.12
+Running Unit tests for Node
+. Can add Adjacent Node
+. Can create Node
+. Can set Node Distance
+. Can set Shortest Path in Node
+
+Time: 0.006
+
+OK (4 tests)
+
+JUnit version 4.12
+Running Unit tests for MapFileReader
+. parse node create node and Add to Graph
+. Can read content
+. none existing file produce null result
+. Can open file 
+
+Time: 0.01
+
+OK (4 tests)
+
+JUnit version 4.12
+Running Unit tests for GraphTest
+. Added Node exists in Graph 
+. Can retrieve all nodes 
+. Adding duplicate node throws exception 
+
+Time: 0.006
+
+OK (3 tests)
+
+JUnit version 4.12
+Run path Unit tests
+. can add to path list and retrieve
+
+Time: 0.005
+
+OK (1 test)

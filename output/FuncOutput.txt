@@ -1,0 +1,33 @@
+mainstation:TrainsJava nayana$ ./functional.sh 
+Note: tests/org/gnuzero/trains/NodeTests.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: src/org/gnuzero/trains/Path.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+JUnit version 4.12
+.The length of the shortest route (in terms of distance to travel) from B to B is 0
+.The number of trips starting at C and ending at C with a maximum of 3 stops is 2
+Paths are as follows : 
+[C, D, C]
+[C, E, B, C]
+.The number of trips starting at A and ending at C with exactly 4 stops. 3
+.The distance of the route A-E-D is NONE EXISTING ROUTE
+.The number of different routes from C to C with a distance of less than 30 is 12
+Paths are as follows : 
+[C, D, C]
+[D, C, E, B, C]
+[C, E, B, C]
+[A, E, B, C]
+[A, B, C]
+[A, D, E, B, C]
+[A, D, C]
+[C, E, B, C]
+[C, D, C]
+[D, C, E, B, C]
+[C, D, C, D, C, E, B, C]
+[D, C, E, B, C, C, D, C]
+.The length of the shortest route (in terms of distance to travel) from A to C is 9
+
+Time: 0.015
+
+OK (6 tests)
+
