@@ -11,7 +11,7 @@ import static org.junit.Assert.*;
 
 public class MapFileReaderTest {
 
-    private final String ROUTE_FILE = "routes.txt";
+    private final String ROUTE_FILE = "input/routes.txt";
 
     @Test
     public void testOpenFile() {
