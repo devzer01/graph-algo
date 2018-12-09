@@ -13,7 +13,7 @@ import static org.junit.Assert.fail;
 
 public class GraphFunctionalTests {
 
-    private final String ROUTE_FILE = "routes.txt";
+    private final String ROUTE_FILE = "input/routes.txt";
 
     @After
     public void clear(){
@@ -75,7 +75,7 @@ public class GraphFunctionalTests {
     {
         // Create a sample graph
         Path path = new Path();
-        Graph.main("routes.txt");
+        Graph.main(ROUTE_FILE);
 
         // arbitrary source
         String s = "C";
